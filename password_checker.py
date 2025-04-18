@@ -14,7 +14,8 @@ else:
 for i in password:
     if i.isdigit():
         digit = True
+    if i.isupper():
+        upper = True
 
 result["digit"] = digit
-
-print(result)
+result["upper"] = upper
