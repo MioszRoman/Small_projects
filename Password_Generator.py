@@ -38,5 +38,7 @@ if __name__ == '__main__':
     passwords = get_password()
     password = main(len_of_password)
     full_info = f"{what_for}: {password}\n"
+    passwords.append(full_info)
     print(full_info)
+    write_password(passwords)
 
