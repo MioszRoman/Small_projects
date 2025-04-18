@@ -1,12 +1,18 @@
 import string
 import random
+import os
+
+
+if not os.path.exists("password.txt"):
+    with open("password.txt", "w") as passwords_file:
+        pass
 
 
 def generate_password(pass_len: int) -> str:
     """This function will generate a password"""
     return ''.join([
         random.choice(string.printable)
-        for _ in range(pass_len)
+        for _ in range(int(pass_len))
     ])
 
 
