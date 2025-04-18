@@ -19,3 +19,8 @@ for i in password:
 
 result["digit"] = digit
 result["upper"] = upper
+
+if all(result.values()):
+    print("You have a strong password!")
+else:
+    print("You have a weak password!")
