@@ -21,11 +21,12 @@ choose_button1 = Sg.FilesBrowse('Choose', key='files')
 choose_button2 = Sg.FolderBrowse('Choose', key='folder')
 
 compress_button = Sg.Button('Compress')
+output_label = Sg.Text(key='output')
 
 
 window = Sg.Window('Compressor', layout=[[label1, input_text1, choose_button1],
                                          [label2, input_text2, choose_button2],
-                                         [compress_button]])
+                                         [compress_button, output_label]])
 
 while True:
     events, values = window.read()
@@ -34,5 +35,6 @@ while True:
     match events:
         case 'Compress':
             make_archive(filepaths, folder)
+            window['output'].update(value='Compression completed!')
         case Sg.WIN_CLOSED:
             break
