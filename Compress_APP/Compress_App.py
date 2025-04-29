@@ -27,4 +27,12 @@ window = Sg.Window('Compressor', layout=[[label1, input_text1, choose_button1],
                                          [label2, input_text2, choose_button2],
                                          [compress_button]])
 
-window.read()
+while True:
+    events, values = window.read()
+    filepaths = values['files'].split(';')
+    folder = values['folder']
+    match events:
+        case 'Compress':
+            make_archive(filepaths, folder)
+        case Sg.WIN_CLOSED:
+            break
