@@ -8,5 +8,10 @@ url = f"https://api.nasa.gov/planetary/apod?api_key={api_key}"
 response = requests.get(url)
 data = response.json()
 
+#Make a variables for every things
+date_of_today = data['date']
+title_of_photo = data['title']
+img_url = data['url']
+description = data['explanation']
 
 
