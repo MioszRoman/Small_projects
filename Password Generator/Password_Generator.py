@@ -3,8 +3,8 @@ import random
 import os
 
 
-if not os.path.exists("../password.txt"):
-    with open("../password.txt", "w") as passwords_file:
+if not os.path.exists("password.txt"):
+    with open("password.txt", "w") as passwords_file:
         pass
 
 
