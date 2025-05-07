@@ -10,3 +10,6 @@ input2 = Sg.InputText(tooltip="Enter inches", key="inches")
 convert_button = Sg.Button("Convert")
 exit_button = Sg.Button("Exit")
 output_label = Sg.Text(key="output")
+
+window = Sg.Window("Converter", layout=[[label1, input1], [label2, input2],
+                                        [convert_button, output_label], [exit_button]])
