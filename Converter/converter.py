@@ -2,7 +2,9 @@ import FreeSimpleGUI as Sg
 
 
 def convert_to_meters(feet, inches):
-    pass
+    meters = feet * 0.3048 + inches * 0.0254
+    message = f"{meters:3.2f} m"
+    return message
 
 
 label1 = Sg.Text("Enter a feet: ")
